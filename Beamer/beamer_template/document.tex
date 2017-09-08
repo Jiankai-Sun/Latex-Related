@@ -1,0 +1,166 @@
+\documentclass[xcolor=svgnames]{beamer}
+%[12pt,handout] voor handouts
+%[notes=only] voor alleen de notes
+%[notes=show] voor handouts plus notes
+
+\mode<presentation>
+
+\usetheme{Malmoe}
+%The general lay-out for the presentation. Other options: Berkeley, Warsaw, Boadilla, Goettingen, Hannover, Luebeck, Madrid, Malmoe, Montpellier, Pittsburgh, %Rochester
+
+\setbeamercolor*{titlelike}{parent=structure}
+
+\usecolortheme{dove} 
+%The colortheme for the presentation. Other options are: beaver, dolphin, dove, seahorse, whale.
+
+\usecolortheme[named=DarkSlateGrey]{structure} 
+%The color of headings and bullets in the presentation. Other options are: DarkSlateGray,SeaGreen, there's more to be found on the internet.
+
+\usetheme{split}
+
+\useoutertheme{tree} 
+%The way the outline of the presentation is shown in header. Other options are: infolines, miniframes, shadow, smoothbars, split, tree
+
+\useinnertheme{rectangles}
+%The shape of bullets in the presentation. Other options are: rectangles, circles
+
+\setbeamertemplate{blocks}[shadow=false] 
+%The way blocks are shown.
+
+\beamertemplatenavigationsymbolsempty 
+%Remove the navigationsymbols from the presentation.
+
+\setbeamercovered{transparent}
+
+\usepackage[english]{babel} 
+%The language used to hyphenate
+
+\usepackage{graphicx} 
+%To include pictures
+
+%\usepackage{hyperref} 
+%To include links
+
+\graphicspath{{images/}} 
+%To redirect to a folder named 'images' within the document folder where pictures can be stored.
+
+\setbeamercolor{alerted text}{fg=orange} 
+%The color of alerted text
+
+\usepackage{amssymb,amsmath}
+%To include formulas
+
+\usepackage{lmodern} 
+%The font. Other possibilities are: palatino, inconsolata, gfsdidot, comfortaa, gfsneohellenic, lmodern, there's more to be found on the internet
+
+\renewcommand*\ttdefault{cmvtt}
+\usepackage[T1]{fontenc}
+%\hypersetup{pdfstartview={Fit}}
+
+\AtBeginSection[]
+{
+\begin{frame}<beamer>{Outline}
+\tableofcontents[currentsection]
+\end{frame} % creates an outline overview before each section
+}
+
+\title[short title]{\textbf{LONG TITLE lalalalalalalala}
+\\[0.3em] \large{blablabla}} 
+%title and subtitle
+%short titles between [] are shown in header and footer
+
+\author[shortname1 \and shortname2] {
+	longname1\inst{1,3} \and longname2\inst{2} 
+} 
+% authors
+ 
+\institute{
+    \inst{1} Department of ladida\\institute1
+    \and \inst{2} department of bliblibleu\\ institute2
+    \and\inst{3} Faculty lalala\\ institute3
+} 
+% institutes
+
+\date{}
+
+\begin{document}
+
+\frame{\titlepage} 
+%creates titlepage
+
+\frame{\tableofcontents} 
+%creates table of contents
+
+\section[shorttitlesec1]{Section1: examples of `animations'} 
+%creates section, to be found in table of contents, if preferred to leave out of table of contents mark with * (\section*{notincluded})
+
+\begin{frame}{Frame 1: example of uncover, only, and visible}
+
+\uncover<1>{
+uncover
+}
+
+\visible<1>{
+visible
+}
+
+\only<1>{
+only
+}
+
+\uncover<2>{
+uncover is grey when it is not `active' \\
+only is completely overwritten when it is not `active' \\
+visible is no longer visible but still occupies its original space}
+\end{frame}
+
+\note{
+Can be used to create notes for presenter. Can be printed by editing the options in the class definition at the top of the document.
+}
+
+\begin{frame}{Frame 2: example of itemize uncovering}
+
+\begin{itemize}[<+->]
+  \item hello
+  \item reader
+\end{itemize}
+
+\end{frame}
+
+
+\section[shorttitlesec2]{Section 2: examples of ways to arrange your slide}
+
+\begin{frame}{Frame 3: example of columns}
+
+\begin{columns}
+  \column{10em}
+bla
+  \column{10em}
+bla
+\end{columns}
+\end{frame}
+
+\note{
+
+notes
+
+}
+
+\begin{frame}{Frame 4: example of blocks}
+  \begin{block}{title 1}
+    ladida
+  \end{block}
+  \begin{block}{title 2}
+  didali
+  \end{block}
+\end{frame}
+
+\subsection[shorttitlesubsec]{Miscellaneous}
+
+\begin{frame}[shrink]{Shrink frame and insert media}
+
+If you have added a lot of text on the slide, you can shrink the text by adding [shrink] after the frame command.
+Hyperlinks to movies and adding pictures can be achieved similar to the way that works in other LaTeX documents, using includegraphics en hyperref url
+\end{frame}
+
+\end{document}
