@@ -24,7 +24,9 @@
 \usepackage{graphicx} % Required for the inclusion of images
 \usepackage{natbib} % Required to change bibliography style to APA
 \usepackage{amsmath} % Required for some math elements 
-
+\usepackage{listings}
+\usepackage{ctex}
+\CTEXoptions[today=old]
 \setlength\parindent{0pt} % Removes all indentation from paragraphs
 
 \renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
@@ -35,9 +37,9 @@
 %	DOCUMENT INFORMATION
 %----------------------------------------------------------------------------------------
 
-\title{Determination of the Atomic \\ Weight of Magnesium \\ CHEM 101} % Title
+\title{Assignment 1: Introduction to OpenGL \\ Question 1: Draw A Simple Red Cube \\ CS 337} % Title
 
-\author{John \textsc{Smith}} % Author name
+\author{Jack \textsc{Sun}} % Author name
 
 \date{\today} % Date for the report
 
@@ -47,10 +49,10 @@
 
 \begin{center}
 \begin{tabular}{l r}
-Date Performed: & January 1, 2012 \\ % Date the experiment was performed
-Partners: & James Smith \\ % Partner names
-& Mary Smith \\
-Instructor: & Professor Smith % Instructor/supervisor
+Date Performed: & October 9, 2017 \\ % Date the experiment was performed
+%Partners: & James Smith \\ % Partner names
+%& Mary Smith \\
+Instructor: & Professor Sheng % Instructor/supervisor
 \end{tabular}
 \end{center}
 
@@ -65,7 +67,7 @@ Instructor: & Professor Smith % Instructor/supervisor
 
 \section{Objective}
 
-To determine the atomic weight of magnesium via its reaction with oxygen and to study the stoichiometry of the reaction (as defined in \ref{definitions}):
+Write a program to draw a simple red cube.
 
 
 
@@ -77,20 +79,20 @@ To determine the atomic weight of magnesium via its reaction with oxygen and to 
 %Objective 2 text
 %\end{description}
 
-\subsection{Definitions}
-\label{definitions}
-\begin{description}
-\item[Stoichiometry]
-The relationship between the relative quantities of substances taking part in a reaction or forming a compound, typically a ratio of whole integers.
-\item[Atomic mass]
-The mass of an atom of a chemical element expressed in atomic mass units. It is approximately equivalent to the number of protons and neutrons in the atom (the mass number) or to the average number allowing for the relative abundances of different isotopes. 
-\end{description} 
+%\subsection{Definitions}
+%\label{definitions}
+%\begin{description}
+%\item[Stoichiometry]
+%The relationship between the relative quantities of substances taking part in a reaction or forming a compound, typically a ratio of whole integers.
+%\item[Atomic mass]
+%The mass of an atom of a chemical element expressed in atomic mass units. It is approximately equivalent to the number of protons and neutrons in the atom (the mass number) or to the average number allowing for the relative abundances of different isotopes. 
+%\end{description} 
  
 %----------------------------------------------------------------------------------------
 %	SECTION 2
 %----------------------------------------------------------------------------------------
 
-\section{Experimental Data}
+\section{Experiment}
 
 \begin{tabular}{ll}
 
@@ -102,7 +104,7 @@ Magnesium from sample bottle & \#1
 %	SECTION 3
 %----------------------------------------------------------------------------------------
 
-\section{Sample Calculation}
+\section{Result}
 
 \begin{tabular}{ll}
 
